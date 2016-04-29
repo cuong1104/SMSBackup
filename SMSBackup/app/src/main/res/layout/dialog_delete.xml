@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#016c76"
+            android:gravity="center"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/tvTitle"
+                android:text="Delete Backup"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvContent"
+            android:text="Do you want to delete this backup?"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="50dp">
+
+            <Button
+                android:id="@+id/btnYes"
+                android:layout_width="70dp"
+                android:text="Yes"
+                android:textColor="#ffffff"
+                android:background="#3142ff"
+                android:layout_marginRight="20dp"
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/btnNo"
+                android:layout_width="70dp"
+                android:text="No"
+                android:textColor="#fff"
+                android:background="#ff1717"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

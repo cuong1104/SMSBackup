@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="alert_orange">#FFBB33</color>
+    <color name="light_gray">#F4F4F4</color>
+    <color name="ai_back">#009688</color>
+    <color name="expense_bg">#fffdfdfd</color>
+    <color name="btn_blue_normal">#ff429eff</color>
+    <color name="btn_blue_press">#ff4192f2</color>
+    <color name="btn_green_normal">#03a9d2</color>
+    <color name="btn_green_press">#ff03ba16</color>
+    <color name="btn_red_normal">#ffff3949</color>
+    <color name="btn_red_press">#fff13949</color>
+    <color name="btn_white_normal">#ffffff</color>
+    <color name="btn_white_press">#f2f2f2</color>
+    <color name="bg_add_expense">#fffdfdfd</color>
+    <color name="bg_date_normal">#fff7f7f7</color>
+    <color name="bg_date_press">#76eded</color>
+    <color name="bg_select">#91ffff</color>
+    <color name="bg_un_select">#ffffff</color>
+</resources>

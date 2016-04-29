@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Backup SMS</string>
+    <string name="action_rate">Rate now</string>
+    <string name="action_feedback">Feedback Us</string>
+    <string name="action_clear">Clear all</string>
+    <string name="choose_sms_app">Set as default</string>
+    <string name="sms_empty">No SMS messages</string>
+    <string name="set_default_sms_text">This app is not the default SMS app</string>
+    <string name="sms_send_new_hint">Send new SMS</string>
+    <string name="sms_send">Send</string>
+    <string name="sms_send_disabled">SMS Sending Disabled</string>
+    <string name="s_info">"1, Chọn <b>Sao lưu</b>, chọn nơi lưu trữ (lưu ý android 4.4+ không cho phép lưu trên thẻ nhớ), có thể chọn thời gian của tin nhắn cần sao lưu. Bạn có thể đặt tên mới cho file sao lưu. Cuối cùng nhấn <b>Sao Lưu</b> để tiến hành sao lưu.
+\n2, Chọn <b>Khôi Phục</b>, có 2 cách khôi phục tin nhắn. Một là tránh trùng lặp, những tin nhắn cùng nội dung ngày tháng sẽ được bỏ qua. Hai là ghi đè, sẽ xóa hết tất cả tin nhắn hiện có trong máy. Nhấn <b>Khôi Phục</b> để bắt đầu.\n
+3, Chọn <b>Clear SMS</b>, tất cả tin nhắn SMS hiện có trong máy sẽ bị xóa.\n
+4, Chọn <b>Clear MMS</b>, tất cả các tin nhắn MMS hiện có trong máy sẽ bị xóa."</string>
+</resources>

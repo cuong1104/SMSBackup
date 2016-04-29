@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#016c76"
+            android:gravity="center"
+            android:layout_height="40dp">
+            <TextView
+                android:text="Khôi phục"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:text="Chọn cách khôi phục:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbMerger"
+                android:text="Tránh trùng lặp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rbReplace"
+                android:layout_marginLeft="20dp"
+                android:text="Ghi đè"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/send_sms_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/standard_margin"
+            android:paddingRight="@dimen/standard_margin"
+            android:background="#ffffff">
+
+            <Button
+                android:id="@+id/btnRestore"
+                android:layout_marginLeft="5dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Khôi phục" />
+
+            <ProgressBar
+                android:id="@+id/pbRestore"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="40px"
+                android:layout_toLeftOf="@+id/btnRestore"
+                android:maxHeight="70px"
+                android:minHeight="70px"
+                android:progress="100"
+                android:progressDrawable="@drawable/greenprogress" />
+            <TextView
+                android:id="@+id/tvProgressRestore"
+                android:layout_width="wrap_content"
+                android:text="NA/NA"
+                android:textColor="#000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="120dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lvBackupFile"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </LinearLayout>
+</LinearLayout>

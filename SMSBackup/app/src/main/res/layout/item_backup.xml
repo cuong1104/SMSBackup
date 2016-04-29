@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sms_backup_1444012389383.xml (24.5kb)"
+        android:textColor="#000"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015/10/05"
+        android:textColor="#aa000000"
+        android:textStyle="italic"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp" />
+</LinearLayout>

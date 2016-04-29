@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#016c76"
+            android:gravity="center"
+            android:layout_height="40dp">
+            <TextView
+                android:text="Sao lưu"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:text="Chọn nơi lưu trữ:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbExt"
+                android:text="Bộ nhớ máy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rbOther"
+                android:layout_marginLeft="20dp"
+                android:text="Khác"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spSD"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+        <TextView
+            android:text="Chọn thời gian:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbAll"
+                android:text="Tất cả"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rbFrom"
+                    android:text="Kể từ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvFrom"
+                    android:layout_marginLeft="10dp"
+                    android:text="10/10/2015 - 9:59"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:text="Đặt tên:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etName"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:hint="Backup file name"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/send_sms_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/standard_margin"
+            android:background="#ffffff">
+
+            <Button
+                android:id="@+id/btnBackup"
+                android:layout_marginLeft="5dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Sao Lưu" />
+
+            <ProgressBar
+                android:id="@+id/pbBackup"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="40px"
+                android:layout_toLeftOf="@+id/btnBackup"
+                android:maxHeight="70px"
+                android:minHeight="70px"
+                android:progress="100"
+                android:progressDrawable="@drawable/greenprogress" />
+            <TextView
+                android:id="@+id/tvProgressBackup"
+                android:layout_width="wrap_content"
+                android:text="NA/NA"
+                android:textColor="#000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="120dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

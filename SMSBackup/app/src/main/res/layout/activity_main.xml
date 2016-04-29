@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/set_default_sms_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/alert_orange"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/set_default_sms_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/standard_margin"
+            android:text="@string/choose_sms_app" />
+
+        <TextView
+            android:id="@+id/set_default_sms_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/standard_margin"
+            android:layout_toLeftOf="@+id/set_default_sms_button"
+            android:text="@string/set_default_sms_text" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@android:id/empty"
+        style="?android:textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/standard_margin"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/sms_empty"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnBackup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sao lưu" />
+
+            <Button
+                android:id="@+id/btnRestore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Khôi phục" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnClearSMS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear SMS" />
+
+            <Button
+                android:id="@+id/btnClearMMS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear MMS" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ivInfo"
+                android:layout_centerVertical="true"
+                android:text="Version: 1.0.0" />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/ivInfo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:paddingBottom="15dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:src="@drawable/ic_info" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lvBackupFile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"></ListView>
+    </LinearLayout>
+</LinearLayout>

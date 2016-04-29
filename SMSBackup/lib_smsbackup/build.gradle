@@ -22,6 +22,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
-    compile project(path: ':lib_nvc_android')
+    compile project(path: ':lib_nvc_android-16.4.29')
     compile files('libs/commons-lang3-3.4.jar')
 }

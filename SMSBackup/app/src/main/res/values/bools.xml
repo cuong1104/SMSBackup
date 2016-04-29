@@ -1,0 +1,4 @@
+<resources>
+    <bool name="hasKitKat">true</bool>
+    <bool name="preKitKat">false</bool>
+</resources>

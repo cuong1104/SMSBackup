@@ -1,1 +1,1 @@
-include ':app', ':lib_smsbackup', ':lib_nvc_android'
+include ':app', ':lib_smsbackup', ':lib_nvc_android-16.4.29'

@@ -10,7 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/lib_nvc_android" />
+            <option value="$PROJECT_DIR$/lib_nvc_android-16.4.29" />
             <option value="$PROJECT_DIR$/lib_smsbackup" />
           </set>
         </option>
@@ -18,7 +18,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/lib_nvc_android" />
+            <option value="$PROJECT_DIR$/lib_nvc_android-16.4.29" />
             <option value="$PROJECT_DIR$/lib_smsbackup" />
           </set>
         </option>

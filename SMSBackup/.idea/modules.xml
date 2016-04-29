@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/SMSBackup.iml" filepath="$PROJECT_DIR$/SMSBackup.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_nvc_android/lib_nvc_android.iml" filepath="$PROJECT_DIR$/lib_nvc_android/lib_nvc_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_nvc_android-16.4.29/lib_nvc_android-16.4.29.iml" filepath="$PROJECT_DIR$/lib_nvc_android-16.4.29/lib_nvc_android-16.4.29.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_smsbackup/lib_smsbackup.iml" filepath="$PROJECT_DIR$/lib_smsbackup/lib_smsbackup.iml" />
     </modules>
   </component>

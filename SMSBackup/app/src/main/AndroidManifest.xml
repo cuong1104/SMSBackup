@@ -7,7 +7,123 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </activity>
+
+        <!-- BroadcastReceiver that listens for incoming SMS messages -->
+        <!--
+             Note the use of android:enabled that is linked to a bool. This will mean this receiver
+             is enabled on KitKat devices and above
+        -->
+        <receiver
+            android:name=".receiver.SmsReceiver"
+            android:enabled="@bool/hasKitKat"
+            android:permission="android.permission.BROADCAST_SMS" >
+
+            <!-- KitKat+ SMS received action -->
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- BroadcastReceiver that listens for incoming SMS messages -->
+        <!--
+             Note the use of android:enabled that is linked to a bool. This will mean this receiver
+             is enabled on preKitKat devices
+        -->
+        <receiver
+            android:name=".receiver.SmsReceiverLegacy"
+            android:enabled="@bool/preKitKat" >
+
+            <!-- Pre-KitKat SMS received action -->
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- BroadcastReceiver that listens for incoming MMS messages -->
+        <!--
+             Note the use of android:enabled that is linked to a bool. This will mean this receiver
+             is enabled on KitKat devices and above
+        -->
+        <receiver
+            android:name=".receiver.MmsReceiver"
+            android:enabled="@bool/hasKitKat"
+            android:permission="android.permission.BROADCAST_WAP_PUSH" >
+
+            <!-- KitKat+ MMS received action -->
+            <intent-filter>
+                <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+
+                <data android:mimeType="application/vnd.wap.mms-message" />
+            </intent-filter>
+        </receiver>
+
+        <!-- BroadcastReceiver that listens for incoming MMS messages -->
+        <!--
+             Note the use of android:enabled that is linked to a bool. This will mean this receiver
+             is enabled on preKitKat devices
+        -->
+        <receiver
+            android:name=".receiver.MmsReceiverLegacy"
+            android:enabled="@bool/preKitKat" >
+
+            <!-- Pre-KitKat MMS received action -->
+            <intent-filter>
+                <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED" />
+
+                <data android:mimeType="application/vnd.wap.mms-message" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Service that delivers SMS messages received from the phone "quick response" -->
+        <service
+            android:name=".service.RespondService"
+            android:exported="true"
+            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE" >
+            <intent-filter>
+                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </service>
+
+        <!-- A service used internally to process incoming SMS/MMS -->
+        <service
+            android:name=".service.MessagingService"
+            android:exported="false" />
+
+        <activity android:name=".InfoActivity" >
+        </activity>
+        <activity android:name=".BackupActivity" >
+        </activity>
+        <activity android:name=".RestoreActivity" >
+        </activity>
     </application>
 
 </manifest>
